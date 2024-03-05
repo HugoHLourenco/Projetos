@@ -17,19 +17,15 @@ function gauss() {
     }
 
     //Verificador
-    if (vetor.length % 2 === 0) {
-        
+    if (vetor.length % 2 === 0) {      
         meio = vetor.length / 2
         let res = (num1 + num2) * meio
         console.log(res)  
     } else {
-        alert("erro")
+        meio = (vetor.length / 2) - 0.5
+        let res = ((num1 + num2) * meio) + Math.floor(vetor.length / 2) + 1
+        console.log(res)
     }
-}
-
-function test(){
-    var num1 = Number(n1.value)
-    alert(num1)
 }
 
 bt.addEventListener("click", gauss)
